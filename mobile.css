@@ -82,7 +82,7 @@
         padding: 15px 0;
         font-size: 18px; 
         border-bottom: 1px solid #eee;
-        color: #333;
+        color: #333 !important;
         min-height: 44px;
         text-align: left;
         justify-content: flex-start;
@@ -92,16 +92,16 @@
     .nav__link:hover,
     .nav__link.active {
         background: transparent;
-        color: var(--primary-color);
+        color: var(--primary-color) !important;
         padding-left: 10px;
     }
 
-    .button {
-        min-width: 120px;
+    .header::button {
+        height: 150px;
     }
     
     .header__hero {
-        margin-top: 3rem;
+        margin-top: 100px;
     }
     
     .header__title {
