@@ -23,9 +23,10 @@
         top: 20px;
         right: 20px;
         z-index: 1001;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.3);
         border-radius: 4px;
         padding: 10px;
+        border: none;
     }
     
     .menu-toggle_line {
