@@ -2,15 +2,15 @@
     .container {
         padding: 0 15px;
     }
-
+    
     .header__inner {
         padding: 15px 0;
     }
-
+    
     .nav__list {
         gap: 20px;
     }
-
+    
     .header__title {
         font-size: 1.75rem;
     }
@@ -18,7 +18,31 @@
 
 @media (max-width: 768px) {
     .menu-toggle {
-        display: flex;
+        display: flex; 
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        padding: 10px;
+    }
+    
+    .menu-toggle_line {
+        background: white;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle.active .menu-toggle_line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .menu-toggle.active .menu-toggle_line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active .menu-toggle_line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
     }
 
     .header__nav {
@@ -35,31 +59,35 @@
         overflow-y: auto;
         margin: 0;
     }
-
+    
     .header__nav.active {
         right: 0;
     }
-
+    
     .nav__list {
         flex-direction: column;
         gap: 0;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
-
+    
     .nav__item {
         width: 100%;
     }
-
+    
     .nav__link {
         display: block;
         width: 100%;
         padding: 15px 0;
-        font-size: 18px;
+        font-size: 18px; 
         border-bottom: 1px solid #eee;
         color: #333;
         min-height: 44px;
         text-align: left;
+        justify-content: flex-start;
+        border-radius: 0;
     }
-
+    
     .nav__link:hover,
     .nav__link.active {
         background: transparent;
@@ -67,58 +95,41 @@
         padding-left: 10px;
     }
 
-    /*Затемнение фона при открытом меню*/
-    .nav-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.5);
-        z-index: 999;
-    }
-
-    .nav__overlay.active {
-        display: block;
-    }
-
-    /*Уведичение touch-зон*/
     .button {
         min-width: 120px;
     }
-
+    
     .header__hero {
         margin-top: 3rem;
     }
-
+    
     .header__title {
         font-size: 1.5rem;
     }
-
+    
     .section__title {
         font-size: 1.5rem;
     }
-
+    
     .features__grid,
     .products__grid {
         grid-template-columns: 1fr;
     }
-
+    
     .giftset__content {
         grid-template-columns: 1fr;
     }
-
+    
     .combo-item {
         grid-template-columns: 1fr;
     }
-
+    
     .footer-nav__list {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
-
+    
     .masonry__grid {
         column-count: 1;
     }
@@ -148,8 +159,8 @@
     .header {
         padding: 1rem 0;
     }
-
-     .section {
+    
+    .section {
         padding: 2rem 0.5rem;
     }
     
@@ -168,8 +179,8 @@
         width: 100%;
         text-align: center;
     }
-
-     .scroll-top {
+    
+    .scroll-top {
         width: 48px;
         height: 48px;
         bottom: 15px;
